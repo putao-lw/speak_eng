@@ -271,6 +271,7 @@ fun TopicSelectScreen(level: String, onBack: () -> Unit, onTopic: (String) -> Un
 }
 
 @Composable
+@OptIn(ExperimentalMaterial3Api::class)
 fun PracticeCallScreen(level: String, topic: String, viewModel: PracticeViewModel, onBack: () -> Unit) {
     val state by viewModel.uiState.collectAsState()
     val settings by viewModel.settings.collectAsState()
